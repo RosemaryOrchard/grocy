@@ -186,6 +186,16 @@
 						@endphp
 						@if($location != null)
 						{{ $location->name }}
+						@if($location->is_freezer)
+							<i class='fa-solid fa-snowflake text-muted'
+							data-toggle="tooltip"
+							title="{{ $__t("Frozen") }}"></i>
+						@endif
+						@if($location->is_fridge)
+							<i class='fa-solid fa-temperature-low text-muted'
+							data-toggle="tooltip"
+							title="{{ $__t("Refrigerated") }}"></i>
+						@endif
 						@endif
 					</td>
 					<td>

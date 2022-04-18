@@ -79,6 +79,16 @@
 			height="30"
 			class="d-none d-print-flex mx-auto">
 		{{ $location->name }}
+		@if($location->is_freezer)
+			<i class='fa-solid fa-snowflake text-muted'
+			   data-toggle="tooltip"
+			   title="{{ $__t("Frozen") }}"></i>
+		@endif
+		@if($location->is_fridge)
+			<i class='fa-solid fa-temperature-low text-muted'
+			   data-toggle="tooltip"
+			   title="{{ $__t("Refrigerated") }}"></i>
+		@endif
 		<a class="btn btn-outline-dark btn-sm responsive-button print-single-location-button d-print-none"
 			href="#">
 			{{ $__t('Print') . ' (' . $__t('this location') . ')' }}
