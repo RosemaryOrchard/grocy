@@ -177,7 +177,8 @@ Grocy.Components.ProductPicker.GetPicker().on('change', function(e)
 								$("#location_id_from").append($("<option>", {
 									value: stockLocation.location_id,
 									text: stockLocation.location_name + " (" + __t("Default location") + ")",
-									"data-is-freezer": stockLocation.location_is_freezer
+									"data-is-freezer": stockLocation.location_is_freezer,
+									"data-is-fridge": stockLocation.location_is_fridge
 								}));
 								$("#location_id_from").val(productDetails.location.id);
 								$("#location_id_from").trigger('change');
@@ -188,7 +189,8 @@ Grocy.Components.ProductPicker.GetPicker().on('change', function(e)
 								$("#location_id_from").append($("<option>", {
 									value: stockLocation.location_id,
 									text: stockLocation.location_name,
-									"data-is-freezer": stockLocation.location_is_freezer
+									"data-is-freezer": stockLocation.location_is_freezer,
+									"data-is-fridge": stockLocation.location_is_fridge
 								}));
 							}
 

@@ -83,7 +83,7 @@
 				id="location-filter">
 				<option value="all">{{ $__t('All') }}</option>
 				@foreach($locations as $location)
-				<option value="{{ $location->id }}">{{ $location->name }}</option>
+					@include('components.locationoption')
 				@endforeach
 			</select>
 		</div>

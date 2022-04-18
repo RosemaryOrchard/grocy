@@ -26,7 +26,7 @@
 					data-setting-key="product_presets_location_id">
 					<option value="-1"></option>
 					@foreach($locations as $location)
-					<option value="{{ $location->id }}">{{ $location->name }}</option>
+						@include('components.locationoption')
 					@endforeach
 				</select>
 			</div>

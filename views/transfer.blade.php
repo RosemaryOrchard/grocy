@@ -34,8 +34,7 @@
 					name="location_id_from">
 					<option></option>
 					@foreach($locations as $location)
-					<option value="{{ $location->id }}"
-						data-is-freezer="{{ $location->is_freezer }}">{{ $location->name }}</option>
+						@include('components.locationoption')
 					@endforeach
 				</select>
 				<div class="invalid-feedback">{{ $__t('A location is required') }}</div>
@@ -55,8 +54,7 @@
 					name="location_id_to">
 					<option></option>
 					@foreach($locations as $location)
-					<option value="{{ $location->id }}"
-						data-is-freezer="{{ $location->is_freezer }}">{{ $location->name }}</option>
+						@include('components.locationoption')
 					@endforeach
 				</select>
 				<div class="invalid-feedback">{{ $__t('A location is required') }}</div>
