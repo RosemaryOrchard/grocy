@@ -316,6 +316,9 @@ msgstr ""
 msgid "Freezer"
 msgstr ""
 
+msgid "Fridge"
+msgstr ""
+
 msgid "Hungarian"
 msgstr ""
 
