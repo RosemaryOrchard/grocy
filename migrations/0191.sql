@@ -1,0 +1,2 @@
+ALTER TABLE locations
+ADD is_fridge TINYINT NOT NULL DEFAULT 0;

@@ -43,6 +43,7 @@ class DemoDataGeneratorService extends BaseService
 				INSERT INTO locations (name) VALUES ('{$this->__t_sql('Candy cupboard')}'); --4
 				INSERT INTO locations (name) VALUES ('{$this->__t_sql('Tinned food cupboard')}'); --5
 				INSERT INTO locations (name, is_freezer) VALUES ('{$this->__t_sql('Freezer')}', 1); --6
+				INSERT INTO locations (name, is_fridge) VALUES ('{$this->__t_sql('Fridge')}', 1); --6
 
 				INSERT INTO shopping_locations (name) VALUES ('{$this->__t_sql('DemoSupermarket1')}'); --1
 				INSERT INTO shopping_locations (name) VALUES ('{$this->__t_sql('DemoSupermarket2')}'); --2
