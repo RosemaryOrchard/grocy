@@ -80,6 +80,8 @@
 					</th>
 					<th>{{ $__t('Name') }}</th>
 					<th>{{ $__t('Description') }}</th>
+					<th>{{ $__t('Fridge') }}</th>
+					<th>{{ $__t('Freezer') }}</th>
 
 					@include('components.userfields_thead', array(
 					'userfields' => $userfields
@@ -111,6 +113,24 @@
 					</td>
 					<td>
 						{{ $location->description }}
+					</td>
+					<td
+						@if($location->is_fridge)
+						data-search="{{ $__t('Fridge') }}"
+					>
+							<span title="{{ $__t('Is fridge') }}"><i class="fa-solid fa-temperature-low"></i></span>
+						@else
+					>
+						@endif
+					</td>
+					<td
+						@if($location->is_freezer)
+						data-search="{{ $__t('Freezer') }}"
+					>
+							<span title="{{ $__t('Is freezer') }}"><i class="fa-solid fa-snowflake"></i></span>
+						@else
+					>
+						@endif
 					</td>
 
 					@include('components.userfields_tbody', array(
