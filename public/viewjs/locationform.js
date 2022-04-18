@@ -88,7 +88,33 @@ $('#location-form input').keydown(function(event)
 	}
 });
 
+$('#is_freezer').change(function(e)
+{
+	updateFridgeFreezer();
+});
+
+$('#is_fridge').change(function(e)
+{
+	updateFridgeFreezer();
+});
+
+function updateFridgeFreezer() {
+	const fridge = document.getElementById("is_fridge").checked;
+	const freezer = document.getElementById("is_freezer").checked;
+	if (fridge) {
+		$("#is_freezer").attr("disabled", "").removeAttr('checked');
+	} else {
+		$("#is_freezer").removeAttr("disabled");
+	}
+	if (freezer) {
+		$("#is_fridge").attr("disabled", "").removeAttr('checked');
+	} else {
+		$("#is_fridge").removeAttr("disabled");
+	}
+}
+
 Grocy.Components.UserfieldsForm.Load();
+updateFridgeFreezer();
 Grocy.FrontendHelpers.ValidateForm('location-form');
 setTimeout(function()
 {

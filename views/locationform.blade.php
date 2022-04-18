@@ -58,17 +58,34 @@
 						&&
 						$location->is_freezer == 1) checked @endif class="form-check-input custom-control-input" type="checkbox" id="is_freezer" name="is_freezer" value="1">
 					<label class="form-check-label custom-control-label"
-						for="is_freezer">{{ $__t('Is freezer') }}
+						   for="is_freezer">
+						<span title="{{ $__t('Is freezer') }}"><i class="fa-solid fa-snowflake"></i></span>&nbsp;{{ $__t('Is freezer') }}
 						&nbsp;<i class="fa-solid fa-question-circle text-muted"
 							data-toggle="tooltip"
 							data-trigger="hover click"
 							title="{{ $__t('When moving products from/to a freezer location, the products due date is automatically adjusted according to the product settings') }}"></i>
 					</label>
 				</div>
+				<div class="custom-control custom-checkbox">
+					<input @if($mode=='edit'
+						&&
+						$location->is_fridge == 1) checked @endif class="form-check-input custom-control-input" type="checkbox" id="is_fridge" name="is_fridge" value="1">
+					<label class="form-check-label custom-control-label"
+						   for="is_fridge">
+						<span title="{{ $__t('Is fridge') }}"><i class="fa-solid fa-temperature-low"></i></span>&nbsp;{{ $__t('Is fridge') }}
+						&nbsp;<i class="fa-solid fa-question-circle text-muted"
+							 data-toggle="tooltip"
+							 data-trigger="hover click"
+							 title="{{ $__t('If a product has been specified as needing refrigeration (after opening), then this will be an eligible location') }}"></i>
+					</label>
+				</div>
 			</div>
 			@else
 			<input type="hidden"
 				name="is_freezer"
+				value="0">
+			<input type="hidden"
+				name="is_fridge"
 				value="0">
 			@endif
 
