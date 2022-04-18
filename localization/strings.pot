@@ -1532,7 +1532,13 @@ msgstr ""
 msgid "Is freezer"
 msgstr ""
 
+msgid "Is fridge"
+msgstr ""
+
 msgid "This cannot be the same as the \"From\" location"
+msgstr ""
+
+msgid "Chilled"
 msgstr ""
 
 msgid "Thawed"
