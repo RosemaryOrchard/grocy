@@ -93,6 +93,10 @@
 						{
 							toastr.info('<span>' + __t("Thawed") + "</span> <i class='fa-solid fa-fire-alt'></i>");
 						}
+						if (parseInt($("#location_id_from option:selected").attr("data-is-fridge")) === 0 && parseInt($("#location_id_to option:selected").attr("data-is-fridge")) === 1) // Refrigerated
+						{
+							toastr.info('<span>' + __t("Refrigerated") + "</span> <i class='fa-solid fa-temperature-low'></i>");
+						}
 
 						$("#specific_stock_entry").find("option").remove().end().append("<option></option>");
 						$("#specific_stock_entry").attr("disabled", "");
